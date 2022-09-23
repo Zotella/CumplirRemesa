@@ -1,0 +1,86 @@
+package CumplirRemesa;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+
+public class Remesa {
+	
+	private WebDriver driver;
+	
+	By usernameLocator =By.id("dnn_ctr580_FormLogIn_edUsername");
+	By passwordLocator = By.id("dnn_ctr580_FormLogIn_edPassword"); 
+	
+	@Before
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rndc.mintransporte.gov.co/MenuPrincipal/tabid/204/language/es-MX/Default.aspx?returnurl=%2fprogramasRNDC%2fcreardocumento%2ftabid%2f69%2fctl%2fCumplirRemesa%2fmid%2f396%2fprocesoid%2f5%2fdefault.aspx");
+		
+	}
+	
+			
+
+	@Test
+	public void testAisPage () {
+		
+			driver.findElement (usernameLocator).sendKeys("MIGUELW1@427");
+			driver.findElement (passwordLocator).sendKeys("RNDC2021MIGUELW2022");
+			driver.findElement(By.id("dnn_ctr580_FormLogIn_btIngresar")).click();
+			driver.findElement(By.id("tddnn_dnnSOLPARTMENU_ctldnnSOLPARTMENU119")).click();
+			driver.findElement(By.id("tddnn_dnnSOLPARTMENU_ctldnnSOLPARTMENU120")).click();
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_CONSECUTIVOREMESA")).sendKeys("530833");
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_CONSECUTIVOREMESA")).sendKeys(Keys.TAB);
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_NOMTIPOCUMPLIDOREMESA")).click();
+			
+			Select drpTipoCumplido = new Select(driver.findElement(By.id("dnn_ctr396_CumplirRemesa_NOMTIPOCUMPLIDOREMESA")));
+			drpTipoCumplido.selectByVisibleText("Cumplido Normal");
+			drpTipoCumplido.selectByIndex(1);
+			driver.findElement (By.id("dnn_ctr396_CumplirRemesa_NOMTIPOCUMPLIDOREMESA")).click();
+			String cantidadCargada = driver.findElement (By.id("dnn_ctr396_CumplirRemesa_CANTIDADCARGADA")).getAttribute("value");
+				
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_CANTIDADENTREGADA")).sendKeys(cantidadCargada);
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_FECHALLEGADADESCARGUE")).click();
+			
+			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy ");
+			//get current date time with Date()
+			 Date date = new Date();
+			 // Now format the date
+			 String date1= dateFormat.format(date);
+			 
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_FECHALLEGADADESCARGUE")).sendKeys(date1);
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_HORALLEGADADESCARGUECUMPLIDO")).sendKeys("21:00");
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_FECHAENTRADADESCARGUE")).sendKeys(date1);
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_HORAENTRADADESCARGUECUMPLIDO")).sendKeys("22:00");
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_FECHASALIDADESCARGUE")).sendKeys(date1);
+			driver.findElement(By.id("dnn_ctr396_CumplirRemesa_HORASALIDADESCARGUECUMPLIDO")).sendKeys("23:00");
+			
+					
+			
+			
+			
+						/*driver.findElement (By.xpath("//*[text()='Continuar']")).click();
+			driver.findElement (By.xpath("//span[@class='fas fa-calendar-minus fa-lg fa-fw']")).click();
+			driver.findElement (By.xpath("//a[contains(text(),'Reprogramar cita')]")).click();*/
+			
+			
+			
+			System.out.print("Register pages was not found");
+		}
+
+}

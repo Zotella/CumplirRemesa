@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.Image"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.ImageDescription"/>
+    <fullyQualifiedTypeName name="java.awt.image.RenderedImage"/>
+    <fullyQualifiedTypeName name="com.hp.lft.report.Reporter"/>
+    <fullyQualifiedTypeName name="com.hp.lft.report.Status"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.BrowserFactory"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.BrowserType"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.Link"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.LinkDescription"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.Browser"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.EditField"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.EditFieldDescription"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.Button"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.ButtonDescription"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.ListBox"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.ListBoxDescription"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.WebElement"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.WebElementDescription"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.TableDescription"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.Table"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.Page"/>
+    <fullyQualifiedTypeName name="com.hp.lft.sdk.web.PageDescription"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+    <fullyQualifiedTypeName name="org.junit.After"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+</qualifiedTypeNameHistroy>
