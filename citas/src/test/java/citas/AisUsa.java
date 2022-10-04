@@ -21,7 +21,7 @@ public class AisUsa {
 	By usernameLocator =By.id("user_email");
 	By passwordLocator = By.id("user_password"); 
 	
-	
+	System.out.println("hola");
 	
 	@Before
 	public void setUp() {
